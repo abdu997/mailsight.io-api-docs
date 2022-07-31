@@ -14,9 +14,9 @@ Always add an `x-api-key` in the header of all API requests.
 **Body**
 ```json
 {
-	"firstName": "", // REQUIRED
-	"lastName": "", // REQUIRED
-	"middleName": "", // OPTIONAL
+	"firstName": "Jon", // REQUIRED
+	"lastName": "Doe", // REQUIRED
+	"middleName": "E", // OPTIONAL
 	"domain": "example.com" // REQUIRED
 }
 ```
