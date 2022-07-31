@@ -10,15 +10,17 @@ Always add an `x-api-key` in the header of all API requests.
 ### Leads
 #### Create a Lead
 `POST https://api.mailsight.io/leads`
+
 **Body**
 ```json
 {
-	firstName: '', // REQUIRED
-	lastName: '', // REQUIRED
-	middleName: '', // OPTIONAL
-	domain: 'example.com' // REQUIRED
+	"firstName": "", // REQUIRED
+	"lastName": "", // REQUIRED
+	"middleName": "", // OPTIONAL
+	"domain": "example.com" // REQUIRED
 }
 ```
+
 **Response**
 ```json
 {
@@ -28,6 +30,7 @@ Always add an `x-api-key` in the header of all API requests.
 
 #### Get  Last 25 Leads
 `GET https://api.mailsight.io/leads`
+
 **Response**
 ```json
 [
@@ -63,6 +66,7 @@ Always add an `x-api-key` in the header of all API requests.
 ```
 #### Get a Specific Lead Using LeadId
 `GET https://api.mailsight.io/leads/<leadId>`
+
 **Response**
 ```json
 {
@@ -83,12 +87,14 @@ Always add an `x-api-key` in the header of all API requests.
 ### Validation Requests
 `POST https://api.mailsight.io/email-validation`
 ####  Create Validation Request
+
 **Body**
 ```json
 {
 	"email": "emailtobevalidated@domain.com"
 }
 ```
+
 **Response**
 ```json
 {
@@ -98,6 +104,7 @@ Always add an `x-api-key` in the header of all API requests.
 
 #### Fetch All Validation Requests
 `GET https://api.mailsight.io/email-validate`
+
 **Response**
 ```json
 [
@@ -118,12 +125,13 @@ Always add an `x-api-key` in the header of all API requests.
 `GET https://api.mailsight.io/email-validate/<email>`
 e.g
 `GET https://api.mailsight.io/email-validate/emailtobevalidated@domain.com`
+
 **Response**
 ```json
 {
     "email": "emailtobevalidated@domain.com",
     "status": "PENDING",
     "createdAt": "2022-07-31T21:44:58.427Z"
-},
+}
 ```
 
