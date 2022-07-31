@@ -24,7 +24,7 @@ Always add an `x-api-key` in the header of all API requests.
 **Response**
 ```json
 {
-	leadId: '629aee1d43ec45b35fab90bc',
+	"leadId": "629aee1d43ec45b35fab90bc",
 }
 ```
 
