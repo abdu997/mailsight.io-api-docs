@@ -85,7 +85,7 @@ Always add an `x-api-key` in the header of all API requests.
 }
 ```
 ### Validation Requests
-`POST https://api.mailsight.io/email-validation`
+`POST https://api.mailsight.io/email-validate`
 ####  Create Validation Request
 
 **Body**
