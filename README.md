@@ -1,27 +1,35 @@
 # Mailsight.io API Documentation
 
 ## Signup
+
 To access the API, you will need an `API-KEY`. To request one, please visit our website [mailsight.io](https://mailsight.io/)
 
 ## Authentication
+
 Always add an `x-api-key` in the header of all API requests.
 
 ## Resources
+
 ### Leads
+
 #### Create a Lead
+
 `POST https://api.mailsight.io/leads`
 
 **Body**
+
 ```json
 {
 	"firstName": "Jon", // REQUIRED
 	"lastName": "Doe", // REQUIRED
 	"middleName": "E", // OPTIONAL
+	"locale": "Denmark", // OPTIONAL Denmark or Spain
 	"domain": "example.com" // REQUIRED
 }
 ```
 
 **Response**
+
 ```json
 {
 	"leadId": "629aee1d43ec45b35fab90bc",
@@ -29,9 +37,11 @@ Always add an `x-api-key` in the header of all API requests.
 ```
 
 #### Get  Last 25 Leads
+
 `GET https://api.mailsight.io/leads`
 
 **Response**
+
 ```json
 [
   {
@@ -53,7 +63,7 @@ Always add an `x-api-key` in the header of all API requests.
     "lastName": "Doe",
     "middleName": "",
     "domain": "exampletwo.com",
-    "locale": "",
+    "locale": "Denmark",
     "createdAt": "2022-07-26T08:39:28.228Z",
     "user": {
       "name": "Jos",
@@ -64,10 +74,13 @@ Always add an `x-api-key` in the header of all API requests.
   }
 ]
 ```
+
 #### Get a Specific Lead Using LeadId
+
 `GET https://api.mailsight.io/leads/<leadId>`
 
 **Response**
+
 ```json
 {
     "firstName": "Jon",
@@ -84,11 +97,15 @@ Always add an `x-api-key` in the header of all API requests.
     "emails": ["jon@exampleone.ca"]
 }
 ```
+
 ### Validation Requests
+
 `POST https://api.mailsight.io/email-validate`
-####  Create Validation Request
+
+#### Create Validation Request
 
 **Body**
+
 ```json
 {
 	"email": "emailtobevalidated@domain.com"
@@ -96,6 +113,7 @@ Always add an `x-api-key` in the header of all API requests.
 ```
 
 **Response**
+
 ```json
 {
 	"message":  "Email pending validation"
@@ -103,9 +121,11 @@ Always add an `x-api-key` in the header of all API requests.
 ```
 
 #### Fetch All Validation Requests
+
 `GET https://api.mailsight.io/email-validate`
 
 **Response**
+
 ```json
 [
     {
@@ -122,11 +142,13 @@ Always add an `x-api-key` in the header of all API requests.
 ```
 
 #### Fetch Specific Validation Request
+
 `GET https://api.mailsight.io/email-validate/<email>`
 e.g
 `GET https://api.mailsight.io/email-validate/emailtobevalidated@domain.com`
 
 **Response**
+
 ```json
 {
     "email": "emailtobevalidated@domain.com",
@@ -134,4 +156,3 @@ e.g
     "createdAt": "2022-07-31T21:44:58.427Z"
 }
 ```
-
