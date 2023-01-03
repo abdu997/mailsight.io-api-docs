@@ -17,7 +17,7 @@ Always add an `x-api-key` in the header of all API requests.
 `POST https://api.mailsight.io/leads`
 
 **Body**
-
+Text must be in latin english alphabet. 
 ```json
 {
 	"firstName": "Jon", // REQUIRED
