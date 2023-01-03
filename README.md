@@ -23,6 +23,7 @@ Always add an `x-api-key` in the header of all API requests.
 	"firstName": "Jon", // REQUIRED
 	"lastName": "Doe", // REQUIRED
 	"middleName": "E", // OPTIONAL
+	"secondLastName": "E", // OPTIONAL
 	"locale": "Denmark", // OPTIONAL Denmark or Spain
 	"domain": "example.com" // REQUIRED
 }
