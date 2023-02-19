@@ -157,3 +157,20 @@ e.g
     "createdAt": "2022-07-31T21:44:58.427Z"
 }
 ```
+
+#### Decode name
+
+`GET https://api.mailsight.io/decoded-name/<fullname>`
+e.g
+`GET https://api.mailsight.io/decoded-name/dr. abdul rahman ismail amoud II`
+
+**Response**
+
+```json
+{
+"firstname": "abdul",
+"middlename": "rahman",
+"lastname": "ismail",
+"secondlastname": "amoud"
+}
+```
